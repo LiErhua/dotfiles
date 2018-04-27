@@ -138,7 +138,7 @@ Plugin 'gmarik/Vundle.vim'
 " My Vundles here:
 
 " Display
-"Plugin 'Lokaltog/vim-powerline'  " newer powerline is https://github.com/powerline/powerline
+Plugin 'Lokaltog/vim-powerline'  " newer powerline is https://github.com/powerline/powerline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'chriskempson/tomorrow-theme'
@@ -149,30 +149,33 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'Color-Scheme-Explorer'
 
 " Python
-Plugin 'davidhalter/jedi-vim'
-Plugin 'nvie/vim-flake8'
-Plugin 'mitsuhiko/vim-jinja'
+Plugin 'klen/python-mode'
+Plugin 'kien/ctrlp.vim'
+"Plugin 'davidhalter/jedi-vim'
+"Plugin 'nvie/vim-flake8'
+"Plugin 'mitsuhiko/vim-jinja'
 "Plugin 'kevinw/pyflakes-vim'
 "Plugin 'fs111/pydoc.vim'
 "Plugin 'Pydiction'
 "Plugin 'pep8'
 
 " HTML & CSS
-Plugin 'mattn/emmet-vim'
-Plugin 'hail2u/vim-css3-syntax'
+"Plugin 'mattn/emmet-vim'
+"Plugin 'hail2u/vim-css3-syntax'
 
 " JavaScript
-Plugin 'pangloss/vim-javascript'  " improved indentation
-Plugin 'ternjs/tern_for_vim'  " js autocompletion
-Plugin 'Shutnik/jshint2.vim'
+"Plugin 'pangloss/vim-javascript'  " improved indentation
+"Plugin 'ternjs/tern_for_vim'  " js autocompletion
+"Plugin 'Shutnik/jshint2.vim'
 
 " Go
-Plugin 'fatih/vim-go'
+"Plugin 'fatih/vim-go'
 
 " Markdown
 Plugin 'sjl/badwolf'
 
 " Enhanced
+Plugin 'surround.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'airblade/vim-gitgutter'
@@ -222,7 +225,7 @@ set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 " In Mac with iTerm2, need to select patched font for non-ascii font, in
 " Profiles -> Text
 let g:airline_powerline_fonts = 1
-let g:airline_theme='tomorrow'
+let g:airline_theme='molokai'
 
 
 " -------------------------------------------------------------------------------

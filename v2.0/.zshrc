@@ -1,7 +1,7 @@
 # Use the default config, them overwrite it.
 . ~/.oh-my-zsh/templates/zshrc.zsh-template
 
-ZSH_THEME="tanky"
+ZSH_THEME="robbyrussell"
 DISABLE_CORRECTION="true"
 DISABLE_AUTO_TITLE="true"
 DISABLE_AUTO_UPDATE="true"
