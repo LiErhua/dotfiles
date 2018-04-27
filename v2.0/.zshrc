@@ -35,3 +35,5 @@ POST_CUSTOM="${WORK_DIR}/custom/post_custom.zsh"
 if [ -e "${POST_CUSTOM}" ]; then
     source ${POST_CUSTOM}
 fi
+
+alias vim='/usr/local/bin/vim'
