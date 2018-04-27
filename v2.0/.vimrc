@@ -151,6 +151,7 @@ Plugin 'Color-Scheme-Explorer'
 " Python
 Plugin 'klen/python-mode'
 Plugin 'kien/ctrlp.vim'
+Plugin 'Valloric/YouCompleteMe'
 "Plugin 'davidhalter/jedi-vim'
 "Plugin 'nvie/vim-flake8'
 "Plugin 'mitsuhiko/vim-jinja'
@@ -177,6 +178,7 @@ Plugin 'sjl/badwolf'
 " Enhanced
 Plugin 'surround.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ervandew/supertab'
@@ -189,7 +191,20 @@ Plugin 'Auto-Pairs'  " Auto-Pairs is more useful than AutoClose
 "Plugin 'godlygeek/tabular'
 Plugin 'hotoo/pangu.vim'
 Plugin 'easymotion/vim-easymotion'
-
+"
+"" ======================nerdtree config=====================
+" Ctrl+N 打开/关闭
+map <C-n> :NERDTreeToggle<CR>
+" 当不带参数打开Vim时自动加载项目树
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" 当所有文件关闭时关闭项目树窗格
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" 不显示这些文件
+let NERDTreeIgnore=['\.pyc$', '\~$', 'node_modules'] "ignore files in NERDTree
+" 不显示项目树上额外的信息，例如帮助、提示什么的
+let NERDTreeMinimalUI=1
+"" ===================end nerdtree config=====================
 
 if has('mac') || has('macunix')
     Plugin 'rizzatti/dash.vim'
@@ -212,10 +227,18 @@ filetype plugin indent on     " required!
 " -------------------------------------------------------------------------------
 " Lokaltog/vim-powerline
 " -------------------------------------------------------------------------------
-let g:Powerline_symbols = 'unicode' " compatible/unicode/fancy
-set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show Unicode glyphs
-set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
+"let g:Powerline_symbols = 'unicode' " compatible/unicode/fancy
+"set laststatus=2   " Always show the statusline
+"set encoding=utf-8 " Necessary to show Unicode glyphs
+"set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
+
+set guifont=Inconsolata\ for\ Powerline:h15
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
 
 
 " -------------------------------------------------------------------------------
