@@ -152,7 +152,7 @@ Plugin 'Color-Scheme-Explorer'
 Plugin 'klen/python-mode'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
-"Plugin 'davidhalter/jedi-vim'
+Plugin 'davidhalter/jedi-vim'
 "Plugin 'nvie/vim-flake8'
 "Plugin 'mitsuhiko/vim-jinja'
 "Plugin 'kevinw/pyflakes-vim'
@@ -515,7 +515,7 @@ set t_Co=256
 if exists('+colorcolumn')
     " cc is only exist >= `Vim7.3`
     "设置右侧红线位置, 100代表100个字符之后
-    set cc=100 " Short for colorcolumn
+    set cc=120 " Short for colorcolumn
 else
     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
