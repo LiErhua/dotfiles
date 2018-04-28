@@ -66,6 +66,21 @@ set mouse=a  " Enable mouse
 set foldmethod=indent  " The kind of folding used for the current window
 set foldlevel=99
 
+"设置光标样式为竖线vertical bar
+" Change cursor shape between insert and normal mode in iTerm2.app
+if $TERM_PROGRAM =~ "iTerm"
+let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+endif
+" 设置在tmux下光标样式为vertical bar
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
 " -------------------------------------------------------------------------------
 " Enhanced
 " -------------------------------------------------------------------------------
@@ -192,19 +207,6 @@ Plugin 'Auto-Pairs'  " Auto-Pairs is more useful than AutoClose
 Plugin 'hotoo/pangu.vim'
 Plugin 'easymotion/vim-easymotion'
 "
-"" ======================nerdtree config=====================
-" Ctrl+N 打开/关闭
-map <C-n> :NERDTreeToggle<CR>
-" 当不带参数打开Vim时自动加载项目树
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" 当所有文件关闭时关闭项目树窗格
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-" 不显示这些文件
-let NERDTreeIgnore=['\.pyc$', '\~$', 'node_modules'] "ignore files in NERDTree
-" 不显示项目树上额外的信息，例如帮助、提示什么的
-let NERDTreeMinimalUI=1
-"" ===================end nerdtree config=====================
 
 if has('mac') || has('macunix')
     Plugin 'rizzatti/dash.vim'
@@ -355,6 +357,20 @@ nnoremap <leader>j :JSHint<CR>
 " ----------------------------------------------------------------------------
 "nmap <leader>ne :NERDTreeToggle<CR>
 nmap <leader>ne :NERDTreeTabsToggle<CR>
+
+"" ======================nerdtree config=====================
+" Ctrl+N 打开/关闭
+map <C-n> :NERDTreeToggle<CR>
+" 当不带参数打开Vim时自动加载项目树
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" 当所有文件关闭时关闭项目树窗格
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" 不显示这些文件
+let NERDTreeIgnore=['\.pyc$', '\~$', 'node_modules'] "ignore files in NERDTree
+" 不显示项目树上额外的信息，例如帮助、提示什么的
+let NERDTreeMinimalUI=1
+"" ===================end nerdtree config=====================
 
 " ----------------------------------------------------------------------------
 " ervandew/supertab
