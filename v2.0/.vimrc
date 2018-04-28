@@ -143,6 +143,10 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'chriskempson/tomorrow-theme'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'jnurmine/Zenburn'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'crusoexia/vim-monokai'
+Plugin 'tomasr/molokai'
 "Plugin 'Yggdroot/indentLine'
 " Note vim-colorschemes will cause vim-powerline not work if :tabnew
 " Plugin 'flazz/vim-colorschemes'  " themes collection
@@ -539,6 +543,15 @@ if has("gui_running")
   set gcr=a:blinkon0  "Disable cursor blink
   set lines=60
   set columns=150
+endif
+
+if has('gui_running')
+  set background=dark
+  colorscheme solarized
+else
+  colorscheme Zenburn
+  "colorscheme monokai
+  "colorscheme molokai
 endif
 
 " Highlight TODO/FIXME/XXX
