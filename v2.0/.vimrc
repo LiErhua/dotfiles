@@ -66,21 +66,6 @@ set mouse=a  " Enable mouse
 set foldmethod=indent  " The kind of folding used for the current window
 set foldlevel=99
 
-"设置光标样式为竖线vertical bar
-" Change cursor shape between insert and normal mode in iTerm2.app
-if $TERM_PROGRAM =~ "iTerm"
-let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
-let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
-endif
-" 设置在tmux下光标样式为vertical bar
-if exists('$TMUX')
-  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
-
 " -------------------------------------------------------------------------------
 " Enhanced
 " -------------------------------------------------------------------------------
@@ -529,7 +514,8 @@ set t_Co=256
 
 if exists('+colorcolumn')
     " cc is only exist >= `Vim7.3`
-    set cc=81 " Short for colorcolumn
+    "设置右侧红线位置, 100代表100个字符之后
+    set cc=100 " Short for colorcolumn
 else
     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
@@ -561,7 +547,22 @@ match myTODO /\(TODO\|XXX\|FIXME\)/
 
 " this options can be setted with colors, and must be put after colorscheme
 set cursorline " Highlighter the current line
-set cursorcolumn " Highlighter the vertical line"
+"set cursorcolumn " Highlighter the vertical line"
 hi search cterm=underline ctermfg=white
 
 highlight PmenuSel cterm=underline,bold ctermfg=blue
+
+"设置光标样式为竖线vertical bar
+" Change cursor shape between insert and normal mode in iTerm2.app
+if $TERM_PROGRAM =~ "iTerm"
+let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+endif
+" 设置在tmux下光标样式为vertical bar
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
