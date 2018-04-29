@@ -273,7 +273,7 @@ let g:rbpt_max = 15
 "   Usages <leader>n (shows all the usages of a name)
 "   Open module, e.g. :Pyimport os (opens the os module)
 autocmd FileType python setlocal completeopt-=preview    " disable docstring
-let g:jedi#completions_command = "<C-N>"
+"let g:jedi#completions_command = "<C-N>"
 
 " -------------------------------------------------------------------------------
 " nvie/vim-flake8
