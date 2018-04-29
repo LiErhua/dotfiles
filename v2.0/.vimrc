@@ -141,6 +141,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'chriskempson/tomorrow-theme'
+Plugin 'jnurmine/Zenburn'
 Plugin 'kien/rainbow_parentheses.vim'
 "Plugin 'Yggdroot/indentLine'
 " Note vim-colorschemes will cause vim-powerline not work if :tabnew
@@ -498,7 +499,7 @@ set t_Co=256
 
 if exists('+colorcolumn')
     " cc is only exist >= `Vim7.3`
-    set cc=81 " Short for colorcolumn
+    set cc=100 " Short for colorcolumn
 else
     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
@@ -522,6 +523,8 @@ if has("gui_running")
   set gcr=a:blinkon0  "Disable cursor blink
   set lines=60
   set columns=150
+else
+  colorscheme Zenburn
 endif
 
 " Highlight TODO/FIXME/XXX
