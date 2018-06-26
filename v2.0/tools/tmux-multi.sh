@@ -1,6 +1,6 @@
 #!/bin/bash
 # ------------------------------------------------------------------
-# Tanky Woo (2017-03-01)
+# fupeng.li (2017-03-01)
 # A Tmux ops tool, quick connect to multiple hosts listed in file.
 # By default, the maximum hosts per window can split is 16, which
 # is controlled by MAX_PANES variable, this number is related to

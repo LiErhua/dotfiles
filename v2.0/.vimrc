@@ -1,4 +1,5 @@
 " https://tankywoo.com
+" https://lierhua.top
 
 " ===============================================================================
 " Info
@@ -79,7 +80,7 @@ map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 function HeaderPython()
     call setline(1, "#!/usr/bin/env python")
     call append(1,  "# -*- coding: utf-8 -*-")
-    call append(2,  "# Tanky Woo @ " . strftime('%Y-%m-%d', localtime()))
+    call append(2,  "# fupeng.li @ " . strftime('%Y-%m-%d', localtime()))
     normal G
     normal o
 endf
@@ -88,7 +89,7 @@ autocmd bufnewfile *.py call HeaderPython()
 " .sh file auto add header
 function HeaderBash()
     call setline(1, "#!/bin/bash")
-    call append(1,  "# Tanky Woo @ " . strftime('%Y-%m-%d', localtime()))
+    call append(1,  "# fupeng.li @ " . strftime('%Y-%m-%d', localtime()))
     normal G
     normal o
 endf
@@ -423,7 +424,7 @@ let g:tagbar_sort = 0
 
 "let g:tagbar_type_markdown = {
 "    \ 'ctagstype': 'markdown',
-"    \ 'ctagsbin' : '/Users/TankyWoo/.dotfiles/markdown2ctags.py',
+"    \ 'ctagsbin' : '/Users/fupeng.li/.dotfiles/markdown2ctags.py',
 "    \ 'ctagsargs' : '-f - --sort=yes',
 "    \ 'kinds' : [
 "        \ 's:sections',

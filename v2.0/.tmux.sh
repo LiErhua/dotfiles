@@ -1,10 +1,10 @@
 #!/bin/zsh
-# Tanky Woo <me@tankywoo.com>
+# fupeng.li <fupeng.li.dev@gmail.com>
 
 # 
 SESSION_NAME='dev'
-WINDOWS_NAME1='tankywoo'
-WINDOWS_NAME2='ops-dev'
+WINDOWS_NAME1='fupeng.li'
+WINDOWS_NAME2='dev-ops'
 
 source ~/.zshrc
 tmux='tmux -2'

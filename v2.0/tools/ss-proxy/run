@@ -1,6 +1,6 @@
 #!/bin/bash
 # ------------------------------------------------------------------
-# Tanky Woo (2016-07-28)
+# fupeng.li (2016-07-28)
 # Shadowsocks Wrapper (Python version, not libev)
 # Usage:
 #   ./run <config-name> [start|stop]

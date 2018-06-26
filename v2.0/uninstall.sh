@@ -1,5 +1,5 @@
 #!/bin/bash
-# Tanky Woo @ 2013-10-18 00:19:56
+# fupeng.li @ 2013-10-18 00:19:56
 
 HOME=${HOME}
 

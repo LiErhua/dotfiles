@@ -1,6 +1,6 @@
 #!/bin/bash
 # ------------------------------------------------------------------
-# Tanky Woo (2016-07-30)
+# fupeng.li (2016-07-30)
 # Show code syntax theme with Pygments
 # Ref:
 #   - http://stackoverflow.com/questions/7314044/use-bash-to-read-line-by-line-and-keep-space

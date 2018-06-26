@@ -1,6 +1,6 @@
 #!/bin/bash
 # ------------------------------------------------------------------
-# Tanky Woo (2016-07-28)
+# fupeng.li (2016-07-28)
 # HTTP Wrapper (with polipo)
 # Usage:
 #   ./run [start|stop]

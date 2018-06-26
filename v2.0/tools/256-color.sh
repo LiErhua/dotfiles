@@ -1,6 +1,6 @@
 #!/bin/bash
 # ------------------------------------------------------------------
-# Tanky Woo (2016-07-27)
+# fupeng.li (2016-07-27)
 # Show 256 colors under terminal
 # Ref: http://misc.flogisoft.com/bash/tip_colors_and_formatting
 # ------------------------------------------------------------------
