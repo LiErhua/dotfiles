@@ -1,6 +1,8 @@
 # Use the default config, them overwrite it.
 . ~/.oh-my-zsh/templates/zshrc.zsh-template
 
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/phantomjs:/Applications:/usr/local/mysql/bin:/Library/TeX/texbin:/Applications/Wireshark.app/Contents/MacOS:/Users/fplee/Library/Python/2.7/bin:/Users/fplee/.rvm/bin:/usr/local/sbin
+
 ZSH_THEME="robbyrussell"
 DISABLE_CORRECTION="true"
 DISABLE_AUTO_TITLE="true"

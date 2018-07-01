@@ -170,6 +170,16 @@ Plugin 'mitsuhiko/vim-jinja'
 " Go
 "Plugin 'fatih/vim-go'
 
+" LaTeX
+Plugin 'lervag/vimtex'
+"---tex config---
+let g:vimtex_compiler_latexmk = {'callback' : 0}
+set nocompatible
+let &rtp  = '~/.vim/bundle/vimtex,' . &rtp
+let &rtp .= ',~/.vim/bundle/vimtex/after'
+filetype plugin indent on
+syntax enable
+
 " Markdown
 Plugin 'sjl/badwolf'
 
