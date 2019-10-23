@@ -3,6 +3,9 @@
 
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/phantomjs:/Applications:/usr/local/mysql/bin:/Library/TeX/texbin:/Applications/Wireshark.app/Contents/MacOS:/Users/fplee/Library/Python/2.7/bin:/Users/fplee/.rvm/bin:/usr/local/sbin
 
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export TERM=xterm-256color
 ZSH_THEME="robbyrussell"
 DISABLE_CORRECTION="true"
 DISABLE_AUTO_TITLE="true"
@@ -39,3 +42,6 @@ if [ -e "${POST_CUSTOM}" ]; then
 fi
 
 alias vim='/usr/local/bin/vim'
+alias emacs='/usr/local/Cellar/emacs/26.2/bin/emacs'
+
+eval $(thefuck --alias)

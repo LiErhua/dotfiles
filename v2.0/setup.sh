@@ -87,6 +87,12 @@ config_pip(){
 	ln -sf ${PWD}/.pip/pip.conf ${HOME}/.pip/pip.conf
 }
 
+config_spacemacs(){
+	echo "Create symlink ${HOME}/.spacemacs.d"
+	mkdir ${HOME}/.spacemacs.d
+	ln -sf ${PWD}/.spacemacs.d ${HOME}/.spacemacs.d
+}
+
 main(){
 	check_software_exist
 	install_oh_my_zsh
@@ -95,6 +101,7 @@ main(){
 	config_zsh
 	config_tmux
 	config_pip
+	config_spacemacs
 }
 
 main
