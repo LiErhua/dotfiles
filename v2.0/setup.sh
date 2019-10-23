@@ -89,7 +89,6 @@ config_pip(){
 
 config_spacemacs(){
 	echo "Create symlink ${HOME}/.spacemacs.d"
-	mkdir ${HOME}/.spacemacs.d
 	ln -sf ${PWD}/.spacemacs.d ${HOME}
 }
 
