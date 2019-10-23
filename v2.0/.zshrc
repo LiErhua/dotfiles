@@ -43,5 +43,3 @@ fi
 
 alias vim='/usr/local/bin/vim'
 alias emacs='/usr/local/Cellar/emacs/26.2/bin/emacs'
-
-eval $(thefuck --alias)
