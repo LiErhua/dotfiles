@@ -209,7 +209,7 @@ filetype plugin indent on     " required!
 " To ignore plugin indent changes, instead use:
 "filetype plugin on"
 "
-" Brief help
+" Notince: Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
@@ -536,6 +536,7 @@ if has("gui_running")
   set lines=60
   set columns=150
 else
+  "Notice: if platform is Linux colorscheme is zenburn.  z is lowercase
   colorscheme Zenburn
 endif
 
