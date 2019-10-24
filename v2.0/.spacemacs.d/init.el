@@ -2,6 +2,9 @@
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
+;; 这和 layer（层）的配置有关
+;; layer就是把一组功能联系紧密的package放到一起，
+;; 然后帮你配置好它的各种烦碎细节，给你提供总体上的某个功能
 (defun dotspacemacs/layers ()
   "Configuration Layers declaration.
 You should not put any user code in this function besides modifying the variable
@@ -96,6 +99,7 @@ values."
    ;; Spacemacs and never uninstall them. (default is `used-only')
    dotspacemacs-install-packages 'used-only))
 
+;; spacemacs 的一些基本配置。不要随意改动这里的结构
 (defun dotspacemacs/init ()
   "Initialization function.
 This function is called at the very startup of Spacemacs initialization
@@ -155,7 +159,8 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(spacemacs-dark
-                         spacemacs-light)
+                         spacemacs-light
+                         zenburn)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
@@ -321,6 +326,8 @@ values."
    dotspacemacs-whitespace-cleanup nil
    ))
 
+;; 这里面是给用户写自己的配置代码的。这个函数会在 spacemacs 启动的初期调用
+;; user-init 函数用来写一些初始化的设置，镜像源和代理设置
 (defun dotspacemacs/user-init ()
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init', before layer configuration
@@ -334,6 +341,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
           ("gnu-cn"   . "http://elpa.zilongshanren.com/gnu/")))
   )
 
+;; 这里面也是给用户写自己的配置代码的。不同是该函数会在 spacemacs 启动的最后阶段调用
+;; 一般用来写常规的个性化配置
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
@@ -388,6 +397,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  )
 )
+
 ;; org --> md
 (eval-after-load "org"
   '(require 'ox-md nil t))
