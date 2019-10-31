@@ -44,6 +44,7 @@ values."
      markdown
      javascript
      go
+     lua
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -75,7 +76,8 @@ values."
      chinese
      ;; orgmod, support hugo
      (org :variables
-          org-enable-hugo-support t)
+          org-enable-hugo-support t
+          org-export-with-sub-superscripts t)
      org-projectile
      )
    ;; List of additional packages that will be installed without being
@@ -241,7 +243,8 @@ values."
    dotspacemacs-enable-paste-transient-state nil
    ;; Which-key delay in seconds. The which-key buffer is the popup listing
    ;; the commands bound to the current keystroke sequence. (default 0.4)
-   dotspacemacs-which-key-delay 0.4
+   ;; default is 0.4 but vim mode the speed is slow so set to 0.2
+   dotspacemacs-which-key-delay 0.2
    ;; Which-key frame position. Possible values are `right', `bottom' and
    ;; `right-then-bottom'. right-then-bottom tries to display the frame to the
    ;; right; if there is insufficient space it displays it at the bottom.
@@ -335,12 +338,15 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  ;; 使用子龙山人的源来下载 mepla的数据
   (setq configuration-layer--elpa-archives
         '(("melpa-cn" . "http://elpa.zilongshanren.com/melpa/")
           ("org-cn"   . "http://elpa.zilongshanren.com/org/")
           ("gnu-cn"   . "http://elpa.zilongshanren.com/gnu/")))
+  ;; org 导出带下划线格式时不出错
+  (setq org-use-sub-superscripts '{})
+  (setq org-export-with-sub-superscripts '{})
   )
-
 ;; 这里面也是给用户写自己的配置代码的。不同是该函数会在 spacemacs 启动的最后阶段调用
 ;; 一般用来写常规的个性化配置
 (defun dotspacemacs/user-config ()
