@@ -116,7 +116,7 @@ main(){
 	config_tmux
 	config_pip
 	config_spacemacs
-  config_karabiner
+	config_karabiner
 }
 
 main
