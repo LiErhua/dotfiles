@@ -12,6 +12,8 @@ HOME=${HOME}
 PWD=`pwd`
 OH_MY_ZSH=${HOME}"/.oh-my-zsh"
 VUNDLE=${HOME}"/.vim/bundle/Vundle.vim"
+KARABINER_PATH=${HOME}"/.config/karabiner"
+CONFIG_PATH=${HOME}"/.config"
 
 # Pre check
 check_software_exist(){
@@ -92,6 +94,19 @@ config_spacemacs(){
 	ln -sf ${PWD}/.spacemacs.d ${HOME}
 }
 
+config_karabiner(){
+	echo "Create symlink ${HOME}/.config/karabiner"
+	if [ -d "${KARABINER_PATH}" ]; then
+		  echo "${KARABINER_PATH} exists"
+      rm -rf ${KARABINER_PATH}
+      ln -sf ${PWD}/karabiner ${karabiner_path}
+	else
+		echo "${KARABINER_PATH} not exists. Create it"
+    mkdir -p ${CONFIG_PATH}
+    ln -sf ${PWD}/karabiner ${KARABINER_PATH}
+	fi
+}
+
 main(){
 	check_software_exist
 	install_oh_my_zsh
@@ -101,6 +116,7 @@ main(){
 	config_tmux
 	config_pip
 	config_spacemacs
+  config_karabiner
 }
 
 main
