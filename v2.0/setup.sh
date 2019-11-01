@@ -99,7 +99,7 @@ config_karabiner(){
 	if [ -d "${KARABINER_PATH}" ]; then
 		  echo "${KARABINER_PATH} exists"
       rm -rf ${KARABINER_PATH}
-      ln -sf ${PWD}/karabiner ${karabiner_path}
+      ln -sf ${PWD}/karabiner ${KARABINER_PATH}
 	else
 		echo "${KARABINER_PATH} not exists. Create it"
     mkdir -p ${CONFIG_PATH}
