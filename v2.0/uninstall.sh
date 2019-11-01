@@ -25,6 +25,9 @@ rm -f ${HOME}/.zsh
 echo "Delete symlink ${HOME}/.spacemacs.d"
 rm -rf ${HOME}/.spacemacs.d
 
+echo "Delete symlink ${HOME}/.config/karabiner"
+rm -rf ${HOME}/.config/karabiner
+
 echo "Delete symlink ${HOME}/.pip/pip.conf"
 rm -f ${HOME}/.pip/pip.conf
 rmdir ${HOME}/.pip

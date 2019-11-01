@@ -97,9 +97,9 @@ config_spacemacs(){
 config_karabiner(){
 	echo "Create symlink ${HOME}/.config/karabiner"
 	if [ -d "${KARABINER_PATH}" ]; then
-		  echo "${KARABINER_PATH} exists"
-      rm -rf ${KARABINER_PATH}
-      ln -sf ${PWD}/karabiner ${KARABINER_PATH}
+		echo "${KARABINER_PATH} exists"
+    rm -rf ${KARABINER_PATH}
+    ln -sf ${PWD}/karabiner ${KARABINER_PATH}
 	else
 		echo "${KARABINER_PATH} not exists. Create it"
     mkdir -p ${CONFIG_PATH}
