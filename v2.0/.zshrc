@@ -42,4 +42,3 @@ if [ -e "${POST_CUSTOM}" ]; then
 fi
 
 alias vim='/usr/local/bin/vim'
-alias emacs='/usr/local/Cellar/emacs/26.2/bin/emacs'
