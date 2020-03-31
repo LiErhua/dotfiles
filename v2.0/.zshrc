@@ -39,3 +39,4 @@ if [ -e "${POST_CUSTOM}" ]; then
 fi
 
 alias vim='/usr/local/bin/vim'
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
