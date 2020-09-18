@@ -42,5 +42,5 @@ If there are problems on other platforms, please contact me, thanks.
 - mac 需要提前安装好 commend-line tool
 - mac 提前安装好 brew
 - Mac 使用 brew cask 安装可以安装的小软件
-- mac 下必装软件：karabiner, keyboard maestro, alfred, contexts, iterm2, chrome, vs code, quiver, clashX, oulu, docker
+- mac 下必装软件：karabiner, keyboard maestro, alfred, contexts, iterm2, chrome, vs code, quiver, clashX, oulu, docker, picgo, annotate
 - 挑选出上述可以使用 cask 安装的，一起放到 Mac 自动安装平台，如果只能手动来的，需要提供对应的 package 地址，并提供一键下载地址
